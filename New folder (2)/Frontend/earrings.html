@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earrings | Lume A'More</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --page-bg: #f5f1ee;
+      --text: #1d1a18;
+      --light-line: rgba(29, 26, 24, 0.08);
+      --label: rgba(29, 26, 24, 0.55);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--page-bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      padding-bottom: 54px;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 24px;
+      background: #f8f8f8;
+      flex-wrap: wrap;
+    }
+
+    #navh1 {
+      margin: 0;
+      color: #333;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .navbar nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .navbar nav a,
+    .header-action {
+      color: #333;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .header-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .catalog-navigation {
+      padding: 10px 24px 24px;
+      background: #fff;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #777;
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+
+    .breadcrumbs a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .category-navigation {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-top: 24px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .category-navigation::-webkit-scrollbar {
+      display: none;
+    }
+
+    .category-navigation a {
+      flex: 0 0 auto;
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+      color: #171717;
+      font-size: 1rem;
+      line-height: 1.3;
+      text-decoration: none;
+    }
+
+    .category-navigation a[aria-current="page"] {
+      border-color: #171717;
+    }
+
+    .products-page {
+      width: min(1430px, calc(100vw - 50px));
+      margin: 32px auto 0;
+    }
+
+    .page-heading {
+      margin-bottom: 28px;
+    }
+
+    .page-heading h2 {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.6rem, 4vw, 4rem);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 40px 24px;
+      align-items: start;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 330px;
+      background: #f0ece8;
+      border: 1px solid var(--light-line);
+      overflow: hidden;
+    }
+
+    .product-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #ece6df;
+      filter: saturate(0.8) contrast(1.05);
+    }
+
+    .product-label {
+      min-height: 18px;
+      margin-top: 12px;
+      color: var(--label);
+      font-size: 0.78rem;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    .product-name {
+      min-height: 42px;
+      margin: 0;
+      color: rgba(20, 18, 16, 0.9);
+      font-size: 1.02rem;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .product-price {
+      margin-top: 2px;
+      color: rgba(20, 18, 16, 0.9);
+      font-size: 1.02rem;
+    }
+
+    @media (max-width: 1180px) {
+      .products-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 920px) {
+      .products-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px 16px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .navbar {
+        justify-content: center;
+        padding: 14px 16px;
+      }
+
+      .navbar nav {
+        order: 3;
+        width: 100%;
+        gap: 12px 18px;
+      }
+
+      .catalog-navigation {
+        padding: 12px 16px 18px;
+      }
+
+      .category-navigation {
+        gap: 24px;
+        margin-top: 20px;
+      }
+
+      .products-page {
+        width: min(92vw, 520px);
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .product-image {
+        height: 230px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <h1 id="navh1">Lume A'More</h1>
+    <nav aria-label="Main navigation">
+      <a href="all-products.html">Shop All</a>
+      <a href="new-arrivals.html">New Arrivals</a>
+      <a href="rings.html">Rings</a>
+      <a href="all-products.html#necklaces">Necklaces</a>
+      <a href="earrings.html" aria-current="page">Earrings</a>
+      <a href="index.html">About Us</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-action" href="#"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Login</span></a>
+      <a class="header-action" href="#"><i class="fa-solid fa-heart" aria-hidden="true"></i><span>Cart</span></a>
+    </div>
+  </header>
+
+  <section class="catalog-navigation" aria-label="Product categories">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Earrings</span>
+    </nav>
+    <nav class="category-navigation" aria-label="Browse products">
+      <a href="all-products.html">All Products</a>
+      <a href="new-arrivals.html">New Arrivals</a>
+      <a href="all-products.html#best-sellers">Best Seller</a>
+      <a href="rings.html">Rings</a>
+      <a href="all-products.html#necklaces">Necklaces</a>
+      <a href="earrings.html" aria-current="page">Earrings</a>
+    </nav>
+  </section>
+
+  <main class="products-page">
+    <div class="page-heading">
+      <h2>Earrings</h2>
+    </div>
+    <section class="products-grid" aria-label="Earrings">
+      <article class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Liquid Gold Ear Climbers" />
+        </div>
+        <div class="product-label"></div>
+        <h3 class="product-name">Liquid Gold Ear Climbers</h3>
+        <div class="product-price">€650.00</div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="https://static.wixstatic.com/media/c837a6_eff41a1c04074bcd9bed6a30647dd544~mv2.jpg/v1/fill/w_583,h_778,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_eff41a1c04074bcd9bed6a30647dd544~mv2.jpg" alt="Organic Hoop Pearl Earrings" />
+        </div>
+        <div class="product-label"></div>
+        <h3 class="product-name">Organic Hoop Pearl Earrings</h3>
+        <div class="product-price">€750.00</div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="https://static.wixstatic.com/media/c837a6_b3cdc005f3a44c198418878b11691e11~mv2.jpg/v1/fill/w_583,h_778,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_b3cdc005f3a44c198418878b11691e11~mv2.jpg" alt="Melting Hoop Gold Earrings" />
+        </div>
+        <div class="product-label">Best Seller</div>
+        <h3 class="product-name">Melting Hoop Gold Earrings</h3>
+        <div class="product-price">€750.00</div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Baroque Pearl Drop Earrings" />
+        </div>
+        <div class="product-label"></div>
+        <h3 class="product-name">Baroque Pearl Drop Earrings</h3>
+        <div class="product-price">€900.00</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
