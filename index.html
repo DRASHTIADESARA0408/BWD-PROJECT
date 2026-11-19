@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lume A'More</title>
+</head>
+<style>
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f8f8f8;
+        padding: 10px 20px;
+    }
+
+    #navh1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    #nava1, #nava2, #nava3, #nava4, #nava5, #nava6 {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+    }
+
+    .main1 {
+        text-align: center;
+        padding: 400px 20px;
+        background-image: url('https://static.wixstatic.com/media/84770f_0867b395d9f74f4c94562ac6e5ce348d~mv2.png/v1/fill/w_1901,h_1026,fp_0.41_0.40,q_90,usm_0.66_1.00_0.01,enc_auto/weavy-Gemini%203%20(Nano%20Banana%20Pro)-2026-01-15%20at%2015_38_35.png');
+        background-size: cover;
+        height: 10px;
+        
+        
+        
+    }
+
+    .main1h1 {
+        font-size: 58px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .main1p1 {
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 40px;
+    }
+
+    .main1a1 {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+    .main2 {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .main2h1 {
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .main2p1 {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .main2-grid {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .main2-item {
+        width: 45%;
+        min-width: 300px;
+        text-align: left;
+    }
+
+    .main2-item.right {
+        text-align: right;
+    }
+
+    .main2im1, .main2im2 {
+        width: 100%;
+        max-width: 700px;
+        height: 700px;
+        object-fit: cover;
+        display: block;
+        margin: 0 0 20px;
+    }
+
+    .main2a1, .main2a2 {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+    .main2-item.right .main2a2 {
+        margin-left: auto;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    .log {
+        margin-left: 5px;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .main2p2 {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .main3 {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .main3h1 {
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .main3p1 {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .main3a1 {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+    .main3im1, .main3im2, .main3im3, .main3im4, .main3im5 {
+        width: 18%;
+        height: 260px;
+        margin: 10px;
+        object-fit: cover;
+        display: block;
+        flex: 1 1 0;
+    }
+
+    .imgmain3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .main4 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 90px 20px 80px;
+        min-height: 820px;
+        background-image: linear-gradient(rgba(25, 18, 11, 0.35), rgba(25, 18, 11, 0.35)),
+            url('https://static.wixstatic.com/media/c837a6_c958d3263cc9460a9da514453127798f~mv2.jpg/v1/fill/w_1901,h_1561,fp_0.50_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/weavy-Gemini-3-(Nano-Banana-Pro)-2026-01-04-at-11_55_51.jpg');
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+    }
+
+    .main4-content {
+        position: relative;
+        z-index: 1;
+        max-width: 760px;
+    }
+
+    .main4h1 {
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        line-height: 1.1;
+        color: #f5efe8;
+        margin: 0 0 22px;
+        letter-spacing: 0.04em;
+        font-weight: 400;
+    }
+
+    .main4p1 {
+        font-size: clamp(1.3rem, 2vw, 2.1rem);
+        line-height: 1.7;
+        color: #f9f4ee;
+        margin: 0 auto 32px;
+        max-width: 680px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .main4a1 {
+        display: inline-block;
+        padding: 14px 28px;
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #1d1a17;
+        text-decoration: none;
+        font-size: 1rem;
+        border-radius: 999px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .main4a1:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    .main4im1 {
+        display: block;
+        width: min(35vw, 380px);
+        min-width: 220px;
+        margin: 42px auto 0;
+        border-radius: 18px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+    }
+
+    .earrings-page {
+        background: #f3f0eb;
+        padding: 52px 0 32px;
+    }
+
+    .earrings-wrap {
+        width: min(1320px, calc(100vw - 90px));
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.05fr 1.25fr;
+        gap: 50px;
+        align-items: start;
+    }
+
+    .earrings-header {
+        padding-top: 20px;
+    }
+
+    .earrings-title {
+        margin: 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 400;
+        font-size: clamp(3.6rem, 5vw, 6rem);
+        line-height: 0.92;
+        letter-spacing: -0.06em;
+        color: rgba(24, 22, 20, 0.9);
+    }
+
+    .earrings-copy {
+        max-width: 330px;
+        margin: 18px 0 0;
+        font-size: 1.02rem;
+        line-height: 1.5;
+        color: rgba(33, 29, 27, 0.72);
+    }
+
+    .earrings-grid {
+        margin-top: 90px;
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    .earring-card {
+        flex: 0 0 48%;
+        max-width: 320px;
+    }
+
+    .earring-card img {
+        display: block;
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+        background: #ddd8d3;
+    }
+
+    .earring-name {
+        margin-top: 12px;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.1rem;
+        line-height: 1.2;
+        letter-spacing: 0.01em;
+        color: rgba(18, 17, 15, 0.9);
+    }
+
+    .earring-price {
+        margin-top: 4px;
+        font-size: 0.95rem;
+        color: rgba(28, 24, 21, 0.75);
+    }
+
+    .earrings-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .hero-image {
+        width: min(100%, 690px);
+        height: 720px;
+        background: #d7d1ca;
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: contrast(1.05) saturate(0.85) brightness(0.9);
+    }
+
+    .hero-label {
+        width: min(100%, 690px);
+        margin-top: 18px;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.1rem;
+        line-height: 1;
+        color: rgba(24, 22, 20, 0.9);
+    }
+
+    .welcome-offer {
+        display: grid;
+        grid-template-columns: 1.65fr 0.75fr;
+        align-items: center;
+        background: #f2f0ee;
+        min-height: 760px;
+        overflow: hidden;
+        margin-top: 0;
+    }
+
+    .welcome-photo {
+        width: 100%;
+        height: 100%;
+        background: #dfe1df;
+    }
+
+    .welcome-photo img {
+        display: block;
+        width: 100%;
+        height: 760px;
+        object-fit: cover;
+        filter: grayscale(100%) contrast(1.12) brightness(0.96);
+    }
+
+    .welcome-copy {
+        padding: 40px 32px 40px 54px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .welcome-copy h3 {
+        margin: 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 400;
+        font-size: clamp(2.7rem, 4vw, 4.2rem);
+        line-height: 0.96;
+        letter-spacing: -0.04em;
+        color: rgba(20, 18, 16, 0.94);
+        font-style: italic;
+    }
+
+    .welcome-copy p {
+        margin: 28px 0 18px;
+        max-width: 380px;
+        font-size: clamp(1.15rem, 1.7vw, 1.6rem);
+        line-height: 1.55;
+        color: rgba(22, 20, 18, 0.74);
+        font-weight: 400;
+    }
+
+    .welcome-copy a {
+        display: inline-block;
+        width: fit-content;
+        color: rgba(20, 18, 16, 0.95);
+        text-decoration: none;
+        font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+        line-height: 1.3;
+        border-bottom: 1px solid rgba(20, 18, 16, 0.7);
+        padding-bottom: 3px;
+        font-style: italic;
+    }
+
+    @media (max-width: 980px) {
+        .earrings-wrap {
+            grid-template-columns: 1fr;
+            width: min(90vw, 760px);
+        }
+
+        .earrings-grid {
+            margin-top: 44px;
+            gap: 18px;
+        }
+
+        .earring-card {
+            flex: 1 1 calc(50% - 9px);
+            max-width: none;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 540px;
+        }
+
+        .hero-label {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .welcome-offer {
+            grid-template-columns: 1fr;
+        }
+
+        .welcome-copy {
+            order: 1;
+            padding: 38px 22px 42px;
+        }
+
+        .welcome-photo {
+            order: 0;
+        }
+
+        .welcome-photo img {
+            height: 520px;
+        }
+    }
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<body>
+    <div class="navbar">
+        <h1 id="navh1">Lume A'More</h1>
+        <a href="all-products.html" id="nava1">Shop All</a>
+        <a href="new-arrivals.html" id="nava2">New Arrivals</a>
+        <a href="rings.html" id="nava3">Rings</a>
+        <a href="" id="nava4">Necklaces</a>
+        <a href="earrings.html" id="nava5">Earrings</a>
+        <a href="about.html" id="nava6">About Us</a>
+
+        <div class="icons">
+            <i class="fa-solid fa-user"></i>
+
+        </div>
+        <p class="log">Login</p>
+        <i class="fa-solid fa-heart"></i>
+        <p class="log">Cart</p>
+
+
+    </div>
+
+    <div class="main1">
+        <h1 class="main1h1">Quietly Extraordinary</h1>
+        <p class="main1p1">Intentionally Timeless Jewelry</p>
+        <a href="" class="main1a1">New Arrivals</a>
+    </div>
+
+    <div class="main2">
+        <h1 class="main2h1">Intentionally Timeless Jewelry</h1>
+        <p class="main2p1">Intentionally Timeless Jewelry</p>
+
+        <div class="main2-grid">
+            <div class="main2-item">
+                <img src="https://static.wixstatic.com/media/84770f_c9f397eb41d8432599a5b4c187b217ae~mv2.jpg/v1/fill/w_906,h_1009,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/weavy-Gemini%203%20(Nano%20Banana%20Pro)-2026-01-04%20at%2011_45_34.jpg" alt="" class="main2im1">
+                <p class="main2p1">Chains & Pendants</p>
+                <a href="" class="main2a1">Shop Necklace</a>
+            </div>
+
+            <div class="main2-item right">
+                <img src="https://static.wixstatic.com/media/c837a6_4db55b32ff5e4a64ad6251a043122f15~mv2.jpg/v1/fill/w_906,h_1009,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/weavy-Gemini-3-(Nano-Banana-Pro)-2026-01-04-at-14_34_03.jpg" alt="" class="main2im2">
+                <p class="main2p2">Sculptural Rings</p>
+                <a href="" class="main2a2">Shop Rings</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main3">
+        <h1 class="main3h1">Most Coveted</h1>
+        <p class="main3p1">The Icons of Érice</p>
+
+        <div class="imgmain3">
+            <img src="https://static.wixstatic.com/media/c837a6_e6370894c28949f48618af991ba109b6~mv2.jpg/v1/fill/w_336,h_432,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_e6370894c28949f48618af991ba109b6~mv2.jpg000000000" alt="" class="main3im1">
+            <img src="https://static.wixstatic.com/media/c837a6_43d5764cfe6c45a2b8f08a9499cfe622~mv2.jpg/v1/fill/w_327,h_448,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_43d5764cfe6c45a2b8f08a9499cfe622~mv2.jpg" alt="" class="main3im2">
+            <img src="https://static.wixstatic.com/media/c837a6_632c5a423d5c4481b3752ee23184769a~mv2.jpg/v1/fill/w_334,h_448,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_632c5a423d5c4481b3752ee23184769a~mv2.jpg" alt="" class="main3im3">
+            <img src="https://static.wixstatic.com/media/c837a6_b3cdc005f3a44c198418878b11691e11~mv2.jpg/v1/fill/w_583,h_778,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_b3cdc005f3a44c198418878b11691e11~mv2.jpg" alt="" class="main3im4">
+            <img src="https://static.wixstatic.com/media/c837a6_6d2a15a9c682462ba7136187cefcec8f~mv2.jpg/v1/fill/w_530,h_712,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/c837a6_6d2a15a9c682462ba7136187cefcec8f~mv2.jpg" alt="" class="main3im5">
+        </div>
+
+
+
+
+        <a href="" class="main3a1">Shop Collection</a>
+    </div>
+
+    <div class="main4">
+        <div class="main4-content">
+            <h1 class="main4h1">The Gold Hour</h1>
+            <p class="main4p1">Discover the exquisite simplicity of our 18k gold essentials. Crafted to seamlessly integrate with your unique essence, enhancing your natural radiance through every cherished moment.</p>
+            <a href="" class="main4a1">Shop The Essentials</a>
+            <img src="https://static.wixstatic.com/media/c837a6_23c91142c92f431591af819bbb39b3a3~mv2.jpg/v1/fill/w_295,h_221,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_23c91142c92f431591af819bbb39b3a3~mv2.jpg" alt="" class="main4im1">
+        </div>
+    </div>
+
+    <section class="earrings-page">
+        <div class="earrings-wrap">
+            <div class="earrings-header">
+                <h2 class="earrings-title">Popular Earrings</h2>
+                <p class="earrings-copy">Selected styles from our core collections are now available for a limited time</p>
+
+                <div class="earrings-grid">
+                    <article class="earring-card">
+                        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=80" alt="Mismatched Fluidity Studs" />
+                        <div class="earring-name">Mismatched Fluidity Studs</div>
+                        <div class="earring-price">€550.00</div>
+                    </article>
+
+                    <article class="earring-card">
+                        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=700&q=80" alt="Organic Hoop Pearl Earrings" />
+                        <div class="earring-name">Organic Hoop Pearl Earrings</div>
+                        <div class="earring-price">€750.00</div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="earrings-hero">
+                <div class="hero-image">
+                    <img src="https://static.wixstatic.com/media/c837a6_250a391cfa6c45e588df33ddd461fd02~mv2.jpg/v1/fill/w_903,h_890,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_250a391cfa6c45e588df33ddd461fd02~mv2.jpg" alt="Close-up of gold earrings" />
+                </div>
+                <div class="hero-label">Earrings</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="welcome-offer">
+        <div class="welcome-photo">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1500&q=80" alt="Model wearing large earrings" />
+        </div>
+
+        <div class="welcome-copy">
+            <h3>The Welcome Privilege</h3>
+            <p>Begin your collection with 15% off your first purchase</p>
+            <a href="#">Unlock Offer</a>
+        </div>
+    </section>
+
+</body>
+</html>
