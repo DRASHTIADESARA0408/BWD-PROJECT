@@ -125,6 +125,14 @@
         margin-left: 20px;
     }
 
+    .login-link,
+    .login-link:visited,
+    .login-link:hover,
+    .login-link:focus-visible {
+        color: #333;
+        text-decoration: none;
+    }
+
     .log {
         margin-left: 5px;
         font-size: 16px;
@@ -233,10 +241,7 @@
         transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .main4a1:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
-    }
+    
 
     .main4im1 {
         display: block;
@@ -411,33 +416,7 @@
         font-style: italic;
     }
 
-    @media (max-width: 980px) {
-        .earrings-wrap {
-            grid-template-columns: 1fr;
-            width: min(90vw, 760px);
-        }
-
-        .earrings-grid {
-            margin-top: 44px;
-            gap: 18px;
-        }
-
-        .earring-card {
-            flex: 1 1 calc(50% - 9px);
-            max-width: none;
-        }
-
-        .hero-image {
-            width: 100%;
-            height: 540px;
-        }
-
-        .hero-label {
-            width: 100%;
-        }
-    }
-
-    @media (max-width: 900px) {
+    
         .welcome-offer {
             grid-template-columns: 1fr;
         }
@@ -454,7 +433,7 @@
         .welcome-photo img {
             height: 520px;
         }
-    }
+    
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -464,15 +443,14 @@
         <a href="all-products.html" id="nava1">Shop All</a>
         <a href="new-arrivals.html" id="nava2">New Arrivals</a>
         <a href="rings.html" id="nava3">Rings</a>
-        <a href="" id="nava4">Necklaces</a>
+        <a href="all-products.html" id="nava4">Necklaces</a>
         <a href="earrings.html" id="nava5">Earrings</a>
         <a href="about.html" id="nava6">About Us</a>
 
-        <div class="icons">
+        <a href="login.html" class="icons login-link" aria-label="Login">
             <i class="fa-solid fa-user"></i>
-
-        </div>
-        <p class="log">Login</p>
+            <span class="log">Login</span>
+        </a>
         <i class="fa-solid fa-heart"></i>
         <p class="log">Cart</p>
 
@@ -482,7 +460,7 @@
     <div class="main1">
         <h1 class="main1h1">Quietly Extraordinary</h1>
         <p class="main1p1">Intentionally Timeless Jewelry</p>
-        <a href="" class="main1a1">New Arrivals</a>
+        <a href="new-arrivals.html" class="main1a1">New Arrivals</a>
     </div>
 
     <div class="main2">
@@ -493,13 +471,13 @@
             <div class="main2-item">
                 <img src="https://static.wixstatic.com/media/84770f_c9f397eb41d8432599a5b4c187b217ae~mv2.jpg/v1/fill/w_906,h_1009,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/weavy-Gemini%203%20(Nano%20Banana%20Pro)-2026-01-04%20at%2011_45_34.jpg" alt="" class="main2im1">
                 <p class="main2p1">Chains & Pendants</p>
-                <a href="" class="main2a1">Shop Necklace</a>
+                <a href="new-arrivals.html" class="main2a1">Shop Necklace</a>
             </div>
 
             <div class="main2-item right">
                 <img src="https://static.wixstatic.com/media/c837a6_4db55b32ff5e4a64ad6251a043122f15~mv2.jpg/v1/fill/w_906,h_1009,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/weavy-Gemini-3-(Nano-Banana-Pro)-2026-01-04-at-14_34_03.jpg" alt="" class="main2im2">
                 <p class="main2p2">Sculptural Rings</p>
-                <a href="" class="main2a2">Shop Rings</a>
+                <a href="rings.html" class="main2a2">Shop Rings</a>
             </div>
         </div>
     </div>
@@ -519,14 +497,14 @@
 
 
 
-        <a href="" class="main3a1">Shop Collection</a>
+        <a href="all-products.html" class="main3a1">Shop Collection</a>
     </div>
 
     <div class="main4">
         <div class="main4-content">
             <h1 class="main4h1">The Gold Hour</h1>
             <p class="main4p1">Discover the exquisite simplicity of our 18k gold essentials. Crafted to seamlessly integrate with your unique essence, enhancing your natural radiance through every cherished moment.</p>
-            <a href="" class="main4a1">Shop The Essentials</a>
+            <a href="new-arrivals.html" class="main4a1">Shop The Essentials</a>
             <img src="https://static.wixstatic.com/media/c837a6_23c91142c92f431591af819bbb39b3a3~mv2.jpg/v1/fill/w_295,h_221,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_23c91142c92f431591af819bbb39b3a3~mv2.jpg" alt="" class="main4im1">
         </div>
     </div>

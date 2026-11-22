@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Lume A'More</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --ink: #211f1c;
+      --muted: #76716b;
+      --paper: #f5f1ee;
+      --line: #d7d0c9;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 24px;
+      background: #f8f8f8;
+    }
+
+    .brand {
+      color: #333;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .back-link {
+      color: #333;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .login-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(380px, 0.9fr);
+      min-height: calc(100vh - 60px);
+    }
+
+    .login-image {
+      min-height: 680px;
+      background:
+        linear-gradient(rgba(28, 23, 18, 0.08), rgba(28, 23, 18, 0.08)),
+        url('https://static.wixstatic.com/media/c837a6_c958d3263cc9460a9da514453127798f~mv2.jpg/v1/fill/w_1200,h_1200,fp_0.50_0.50,q_85,enc_avif,quality_auto/weavy-Gemini-3-(Nano-Banana-Pro)-2026-01-04-at-11_55_51.jpg') center / cover;
+    }
+
+    .login-panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 32px;
+      background: var(--paper);
+    }
+
+    .login-content {
+      width: min(100%, 410px);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 400;
+      line-height: 0.95;
+    }
+
+    .intro {
+      margin: 18px 0 34px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.82rem;
+    }
+
+    .field input {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 13px;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: rgba(255, 255, 255, 0.58);
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .field input:focus {
+      outline: 2px solid rgba(33, 31, 28, 0.35);
+      outline-offset: 2px;
+    }
+
+    .form-options {
+      margin: 2px 0 24px;
+      text-align: right;
+    }
+
+    .form-options a,
+    .create-account a {
+      color: var(--ink);
+      font-size: 0.82rem;
+      text-underline-offset: 3px;
+    }
+
+    .submit-button {
+      width: 100%;
+      min-height: 50px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: #fff;
+      font: inherit;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background: #403b36;
+    }
+
+    .create-account {
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .login-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .login-image {
+        min-height: 38vh;
+        background-position: center 42%;
+      }
+
+      .login-panel {
+        padding: 48px 24px 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">Lume A'More</a>
+    <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to shop</a>
+  </header>
+
+  <main class="login-layout">
+    <div class="login-image" role="img" aria-label="Elegant gold jewelry"></div>
+    <section class="login-panel" aria-labelledby="login-title">
+      <div class="login-content">
+        <p class="eyebrow">Welcome back</p>
+        <h1 id="login-title">Sign in</h1>
+        <p class="intro">Access your account to revisit your saved pieces and orders.</p>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" />
+          </div>
+          <div class="form-options">
+            <a href="mailto:support@lumeamore.example?subject=Password%20reset">Forgot password?</a>
+          </div>
+          <button class="submit-button" type="submit">Sign in</button>
+        </form>
+
+        <p class="create-account">New to Lume A'More? <a href="mailto:support@lumeamore.example?subject=Create%20an%20account">Create an account</a></p>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+    });
+  </script>
+</body>
+</html>
